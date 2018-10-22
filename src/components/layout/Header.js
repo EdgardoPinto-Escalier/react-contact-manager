@@ -9,8 +9,8 @@ const Header = props => {
 
   return(
     <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-3 py-0">
-      <div className="container">
-      <a href="/" className="navbar-brand"><i className="fab fa-react"></i> {branding}</a>
+      <div className="container my-2">
+      <a href="/" className="navbar-brand"><i className="fab fa-react fa-lg"></i> {branding}</a>
 
       <button className="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
