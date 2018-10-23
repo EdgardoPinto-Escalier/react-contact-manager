@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Consumer } from '../../context';
-
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Consumer } from "../../context";
 
 class Contact extends Component {
-
   state = {
     showContactInfo: false
   };
 
   onDeleteClick = (id, dispatch) => {
-    dispatch({type: 'DELETE_CONTACT', payload: id});
+    dispatch({ type: "DELETE_CONTACT", payload: id });
   };
 
-
   render() {
-
     const { id, name, email, phone } = this.props.contact;
     const { showContactInfo } = this.state;
 
@@ -25,14 +21,39 @@ class Contact extends Component {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
-              <h4><i className="fas fa-user-alt"></i> {name} <i onClick={() => this.setState({ showContactInfo: !this.state.showContactInfo })} className="fas fa-sort-down" style={{ cursor: 'pointer' }}></i>
-              <i className="fas fa-trash-alt" style={{ cursor: 'pointer', float: 'right', color: '#007bff'}} onClick={this.onDeleteClick.bind(this, id, dispatch)}/></h4>
-              {showContactInfo ? (<ul className="list-group">
-                <li className="list-group-item"><i className="fas fa-at"></i> Email: {email}</li>
-                <li className="list-group-item"><i className="fas fa-phone"></i> Phone: {phone}</li>
-              </ul>) : null}
+              <h4>
+                <i className="fas fa-user-alt fa-sm" /> {name}{" "}
+                <i
+                  onClick={() =>
+                    this.setState({
+                      showContactInfo: !this.state.showContactInfo
+                    })
+                  }
+                  className="fas fa-sort-down"
+                  style={{ cursor: "pointer" }}
+                />
+                <i
+                  className="fas fa-trash-alt"
+                  style={{
+                    cursor: "pointer",
+                    float: "right",
+                    color: "#007bff"
+                  }}
+                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
+                />
+              </h4>
+              {showContactInfo ? (
+                <ul className="list-group">
+                  <li className="list-group-item">
+                    <i className="fas fa-at" /> Email: {email}
+                  </li>
+                  <li className="list-group-item">
+                    <i className="fas fa-phone" /> Phone: {phone}
+                  </li>
+                </ul>
+              ) : null}
             </div>
-          )
+          );
         }}
       </Consumer>
     );
@@ -41,6 +62,6 @@ class Contact extends Component {
 
 Contact.propTypes = {
   contact: PropTypes.object.isRequired
-}
+};
 
 export default Contact;
