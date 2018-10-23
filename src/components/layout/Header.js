@@ -33,12 +33,12 @@ const Header = props => {
             </li>
             <li className="nav-item">
               <Link to="/contact/add" className="nav-link">
-                <i class="fas fa-plus-square" /> ADD
+                <i className="fas fa-plus-square" /> ADD
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/about" className="nav-link">
-                <i class="fas fa-info-circle" /> ABOUT
+                <i className="fas fa-info-circle" /> ABOUT
               </Link>
             </li>
           </ul>

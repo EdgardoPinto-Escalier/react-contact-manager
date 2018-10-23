@@ -12,7 +12,7 @@ class Contacts extends Component {
             <React.Fragment>
               <div className="container">
                 <h1 className="my-4">
-                  <i class="fas fa-clipboard-list" />
+                  <i className="fas fa-clipboard-list" />
                   <span className="text-primary"> CONTACT</span> LIST
                 </h1>
                 {contacts.map(contact => (

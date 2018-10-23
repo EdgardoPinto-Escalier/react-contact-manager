@@ -65,7 +65,7 @@ class AddContact extends Component {
           return (
             <div className="container">
               <h1 className="my-4">
-                <i class="fas fa-user-plus" />
+                <i className="fas fa-user-plus" />
                 <span className="text-primary"> ADD</span> NEW CONTACT
               </h1>
 
