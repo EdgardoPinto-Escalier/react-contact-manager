@@ -2,7 +2,7 @@
   "name": "react-contact-manager",
   "version": "0.1.0",
   "private": true,
-  "home": "https://EdgardoPinto-Escalier.github.io/react-contact-manager",
+  "homepage": "https://EdgardoPinto-Escalier.github.io/react-contact-manager",
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
