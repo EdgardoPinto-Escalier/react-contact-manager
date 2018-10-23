@@ -14,7 +14,7 @@ const TextInputGroup = ({
   return (
     <div className="form-group">
       <label htmlFor={name}>
-        <i className="fas fa-user-circle" /> {label}
+        <i className="fas fa-plus-square" /> {label}
       </label>
       <input
         type={type}
